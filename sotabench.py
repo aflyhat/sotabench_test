@@ -1,6 +1,6 @@
 
-from torchbench.image_classification import ImageNet,ResNet34
-from torchvision.models.resnet import resnext101_32x8d
+from torchbench.image_classification import ImageNet
+from torchvision.models.resnet import resnext101_32x8d,ResNet34
 import torchvision.transforms as transforms
 import PIL
 
@@ -12,8 +12,6 @@ input_transform = transforms.Compose([
     transforms.CenterCrop(224),
     transforms.ToTensor(),
     normalize,
-
-    
 ])
 
 # Run the benchmark
