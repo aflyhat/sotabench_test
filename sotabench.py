@@ -1,5 +1,5 @@
 
-from torchbench.image_classification import ImageNet
+from torchbench.image_classification import ImageNet,ResNet34
 from torchvision.models.resnet import resnext101_32x8d
 import torchvision.transforms as transforms
 import PIL
@@ -18,9 +18,9 @@ input_transform = transforms.Compose([
 
 # Run the benchmark
 ImageNet.benchmark(
-    model=resnext101_32x8d(pretrained=True),
-    paper_model_name='ResNeXt-101-32x8d',
-    paper_arxiv_id='1611.05431',
+    model=ResNet34(pretrained=True),
+    paper_model_name='ResNet34',
+    paper_arxiv_id='1512.03385',
     input_transform=input_transform,
     batch_size=256,
     num_gpu=1
